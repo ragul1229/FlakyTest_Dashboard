@@ -3,6 +3,23 @@ ui_components.py  —  FlakyDetect Professional Edition
 Clean, minimal design. One accent color. No noise.
 """
 import streamlit as st
+CYAN   = "#06B6D4"
+GREEN  = "#10B981"
+AMBER  = "#F59E0B"
+RED    = "#EF4444"
+PURPLE = "#8B5CF6"
+
+TEXT_HI = "#FFFFFF"
+TEXT_MID = "#D1D5DB"
+TEXT_LO = "#9CA3AF"
+
+BG_BASE = "#0F172A"
+BG_SURFACE = "#111827"
+BG_RAISED = "#1F2937"
+BG_BORDER = "#374151"
+
+MONO = "monospace"
+SANS = "sans-serif"
 
 # ── Design Tokens ─────────────────────────────────────────────────────────────
 # Monochrome base + single blue accent + semantic red/green only where needed
