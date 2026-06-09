@@ -455,3 +455,4 @@ def empty_state(icon, title, body, action=""):
       {"<div style='font-size:0.78rem;color:"+ACCENT+";margin-top:0.7rem;'>→ "+action+"</div>" if action else ""}
     </div>
     """, unsafe_allow_html=True)
+

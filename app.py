@@ -59,7 +59,7 @@ def groq_stream(messages, placeholder, max_tokens=500):
 from ui_components import (
     inject_global_css, render_topbar, render_sidebar,
     section_header, kpi_row, score_badge_html, pattern_html,
-    callout, ai_card, chat_bubble, empty_state, terminal_block,
+    callout, ai_card, chat_bubble, empty_state,
     BG_BASE, BG_SURFACE, BG_RAISED, BG_BORDER,
     CYAN, GREEN, AMBER, RED, PURPLE, TEXT_HI, TEXT_MID, TEXT_LO,
     MONO, SANS,
@@ -427,19 +427,19 @@ def page_home():
     # Terminal demo
     st.markdown("<br>", unsafe_allow_html=True)
     section_header("💻", "Under The Hood", "The flakiness algorithm")
-    terminal_block([
-        ("cmd",     "python flaky_engine.py --input test_results.csv"),
-        ("comment", "Loading 12 tests from CI pipeline…"),
-        ("out",     "Computing transition-based flakiness scores…"),
-        ("out",     ""),
-        ("warn",    "test_user_login       score=88  transitions=7/9  CRITICAL"),
-        ("warn",    "test_cache_invalid    score=82  transitions=6/9  CRITICAL"),
-        ("err",     "test_data_export      score=93  transitions=8/9  CRITICAL ← WORST"),
-        ("out",     "test_search_results   score=15  transitions=1/9  STABLE"),
-        ("out",     ""),
-        ("comment", "Sending to Groq AI for root-cause analysis…"),
-        ("out",     "✓ Analysis complete in 4.2s · 3 critical tests need immediate attention"),
-    ])
+    # terminal_block([
+    #     ("cmd",     "python flaky_engine.py --input test_results.csv"),
+    #     ("comment", "Loading 12 tests from CI pipeline…"),
+    #     ("out",     "Computing transition-based flakiness scores…"),
+    #     ("out",     ""),
+    #     ("warn",    "test_user_login       score=88  transitions=7/9  CRITICAL"),
+    #     ("warn",    "test_cache_invalid    score=82  transitions=6/9  CRITICAL"),
+    #     ("err",     "test_data_export      score=93  transitions=8/9  CRITICAL ← WORST"),
+    #     ("out",     "test_search_results   score=15  transitions=1/9  STABLE"),
+    #     ("out",     ""),
+    #     ("comment", "Sending to Groq AI for root-cause analysis…"),
+    #     ("out",     "✓ Analysis complete in 4.2s · 3 critical tests need immediate attention"),
+    # ])
 
     st.markdown("<br>", unsafe_allow_html=True)
     callout("👆 Go to <b>Upload Data</b> in the sidebar to get started. A sample dataset is included.", "info")
