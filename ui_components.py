@@ -455,9 +455,4 @@ def empty_state(icon, title, body, action=""):
       {"<div style='font-size:0.78rem;color:"+ACCENT+";margin-top:0.7rem;'>→ "+action+"</div>" if action else ""}
     </div>
     """, unsafe_allow_html=True)
-
-
-# ── Divider ───────────────────────────────────────────────────────────────────
-def divider():
-    st.markdown(f"<div style='height:1px;background:{BG_BORDER};margin:1.2rem 0;'></div>",
-                unsafe_allow_html=True)
+git
